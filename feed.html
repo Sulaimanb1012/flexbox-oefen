@@ -58,12 +58,13 @@
     }
 
     /* -----------------------------
-       GRID CONTAINER
-       → HIER MOET FLEXBOX HET WERK DOEN
+       GRID CONTAINER (FLEXBOX)
        ----------------------------- */
     .grid {
-      /* TODO: maak hier een flexbox gallery van */
-      /* Denk aan: display, flex-wrap, gap */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
     }
 
     /* -----------------------------
@@ -73,13 +74,12 @@
       background: var(--card-bg);
       border-radius: 1.2rem;
       box-shadow: var(--shadow-soft);
-      margin-bottom: 1.5rem; /* fallback zonder flexbox */
+      margin-bottom: 1.5rem;
       overflow: hidden;
       border: 1px solid rgba(148, 163, 184, 0.18);
     }
 
     .post__image {
-      /* fake image */
       width: 100%;
       aspect-ratio: 1 / 1;
       background: linear-gradient(135deg, #6366f1, #ec4899);
@@ -111,8 +111,7 @@
     }
 
     /* -----------------------------
-       RESPONSIVE – BEWUST HALF
-       Studenten maken de echte kolom-layout met flexbox
+       RESPONSIVE
        ----------------------------- */
     @media (min-width: 768px) {
       .post {
